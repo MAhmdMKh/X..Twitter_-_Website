@@ -1,0 +1,192 @@
+body {
+    font-family: Roboto, Arial;
+    height: 6000px;
+    margin: 0px;
+
+    display: grid;
+    grid-template-columns: 240px 540px 345px;
+    justify-content: center;
+}
+
+
+p {
+    margin: 0px;
+}
+
+a {
+    display: contents;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.wrong-section {
+    background-color: white;
+    font-size: 14px;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .wrong-section div {
+        color: rgb(83, 100, 113);
+        padding: 0px 23px;
+        margin-bottom: 25px;
+    }
+    .wrong-section img {
+        width: 50px;
+        margin-bottom: 20px;
+    }
+    .wrong-section button {
+        background-color: rgb(30, 155, 240);
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px;
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+    }
+        .wrong-section button img {
+            width: 20px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+        }
+.content-container .content-container-relative .wrong-section {
+    padding: 8px 0px;
+}
+
+
+
+
+
+
+
+.tooltip-user {
+    background-color: white;
+    width: 260px;
+    border-radius: 10px;
+    opacity: 0;
+    padding: 10px;
+    pointer-events: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    position: absolute;
+    top: 120%;
+    left: -50%;
+    z-index: 100;
+}
+.tooltip-user-picture-follow {
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+    .tooltip-user-picture-follow img {
+        width: 60px;
+        border-radius: 30px;
+        margin-right: 20px;
+    }
+    .tooltip-user-picture-follow .follow {
+        background-color: black;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        height: 16px;
+        border: none;
+        border-radius: 15px;
+        padding: 7px 15px;
+    }
+    .tooltip-user-picture-follow .following {
+        font-size: 15px;
+        font-weight: 500;
+        height: 20px;
+        border: 1px solid rgb(210, 220, 220);
+        border-radius: 20px;
+        padding: 7px 15px;
+    }
+    .tooltip-user-picture-follow div {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+.tooltip-user-name {
+    font-weight: bold;
+}
+.tooltip-user-handle {
+    color: rgb(85, 100, 115);
+    font-size: 14px;
+}
+.tooltip-user-discription {
+    font-size: 15px;
+    padding: 15px 0px;
+}
+.tooltip-user-follow {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+    .tooltip-user-follow div {
+        color: rgb(85, 100, 115);
+        margin-right: 20px;
+    }
+        .tooltip-user-follow div span {
+            font-weight: bold;
+            color: black;
+        }
+.tooltip-user-summary {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgb(210, 220, 220);
+    border-radius: 15px;
+    padding: 5px 0px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .tooltip-user-summary img {
+        width: 15px;
+        margin-right: 5px;
+    }
+
+
+
+
+
+.black-ground-div {
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    border: none;
+    border-radius: 15px;
+    opacity: 0;
+    padding: 4px 7px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 0.3s;
+    position: absolute;
+    bottom: -22px;
+}
+
+.change-color-pic-div {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    position: absolute;
+    top: 0;
+}
+    .change-color-pic-div:hover {
+        opacity: 1;
+    }

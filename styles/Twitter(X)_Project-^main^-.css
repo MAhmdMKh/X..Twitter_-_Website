@@ -1,0 +1,470 @@
+main {
+    background-color: white;
+    height: 100%;
+    cursor: pointer;
+    border-right: 1px solid rgb(240, 245, 245);
+    border-left: 1px solid rgb(240, 245, 245);
+
+    position: relative;
+}
+
+main .posts-topics,
+main .user-post,
+main .posts {
+    background-color: white;
+    border-top: 1px solid rgb(240, 245, 245);
+    border-bottom: 1px solid rgb(240, 245, 245);
+    margin-bottom: -1px;
+}
+
+
+
+
+
+.posts-topics {
+    background-color: rgb(255, 255, 255);
+    height: 46px;
+    opacity: 0.965;
+    
+    display: flex;
+    flex-shrink: 0;
+
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+}
+    .posts-topics div {
+        height: 100%;
+        white-space: nowrap;
+    }
+
+.topic-options {
+    flex: 1;
+
+    display: flex;
+    flex-shrink: 0;
+}
+    .topic-options div {
+        transition: all 0.3s;
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+        .topic-options div:hover {
+            background-color: rgb(235, 235, 235);
+        }
+.recent-topic {
+    font-size: 13px;
+    font-weight: bold;
+
+    position: relative;
+}
+    .recent-topic img {
+        width: 45px;
+        position: absolute;
+        left: 100px;
+        bottom: 0px;
+    }
+
+.another-topic {
+    font-size: 14px;
+    color: rgb(80, 100, 115);
+}
+
+.add-topic {
+    width: 48px;
+    margin-left: 2px;
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+    .add-topic div {
+        width: 42px;
+        height: 40px;
+        transition: all 0.3s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+        .add-topic div:hover {
+            background-color: rgb(235, 235, 235);
+            border-radius: 30px;
+        }
+
+
+
+
+
+.user-post {
+    padding: 5px 12px 9px 12px;
+}
+
+.user-post-content {
+    margin-bottom: 5px;
+    
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    position: relative;
+}
+    .user-post-content img {
+        width: 43px;
+        margin-right: 4px;
+    }
+        /* General Sibling Combinator ' ~ ' 
+                  selects all matching elements
+                    that come after a specific element inside the same parent */
+        /* Adjacent Sibling Combinator ' + ' 
+                  selects only the very next element
+                    if it matches, right after the specific element inside the same parent. */
+
+    /*
+        .user-post-content img:hover + div {
+            background-color: gray;
+            opacity: 0.5;
+        }
+
+    but in this case, we will change pointer-events: none; to auto;
+*/
+    .user-post-content div {
+        width: 36px;
+        height: 36px;
+        opacity: 0;
+        pointer-events: auto;
+        border-radius: 25px;
+        transition: all 0.15s;
+
+        position: absolute;
+        top: 8px;
+        left: 3px;
+    }
+        .user-post-content div:hover {
+            background-color: gray;
+            opacity: 0.5;
+        }
+    .user-post-content input {
+        font-size: 18px;
+        height: 50px;
+        border: none;
+        outline: none;
+        flex: 1;
+    }
+        .user-post-content input::placeholder {
+            color: rgb(120, 120, 120);
+            font-size: 18px;
+        }
+
+.user-post-edit {
+    padding-left: 39px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+.user-edit-options {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+    .user-edit-options section {
+        width: 36px;
+        height: 34px;
+        border-radius: 20px;
+        transition: background-color 0.2s;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+
+        position: relative;
+    }
+        .user-edit-options section:hover {
+            background-color: rgb(235, 235, 235);
+        }
+        .user-edit-options section:hover img {
+            width: 23px;
+        }
+        .user-edit-options section:hover .black-ground-div {
+            opacity: 1;
+            transition: all 0.3s ease-in-out 1s;
+        }
+    .user-edit-options img {
+        width: 18px;
+        transition: all 0.2s;
+    }
+.user-post-button {
+    background-color: rgb(190, 190, 190);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px 8px 15px;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+
+
+
+.post-container {
+    border-bottom: 1px solid rgb(240, 245, 245);
+    padding: 0px 12px;
+}
+    .post-container:hover {
+        background-color: rgba(235, 235, 235, 0.5);
+    }
+.post-header {
+    padding: 11px 0px;
+
+    display: flex;
+    align-items: start;
+    flex-shrink: 0;
+}
+
+.post-header-right-section {
+    margin-right: 7px;
+
+    position: relative;
+}
+    .post-header-right-section .post-header-profile-pic {
+        width: 36px;
+        border-radius: 25px;
+    }
+        .post-header-right-section .change-color-pic-div:hover ~ .tooltip-user {
+            opacity: 1;
+            transition: opacity 0.3s 1s;
+        }
+    .post-header-right-section nav {
+        background-color: white;
+            
+        opacity: 1;
+        position: absolute;
+    }
+
+.post-header-middle-section {
+    flex: 1;
+}
+.post-informations {
+    margin-bottom: 4px;
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+    .post-informations .post-header-user-name {
+        color: black;
+        font-weight: bold;
+    }
+        .post-informations .post-header-user-name:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+        }
+            .post-informations .post-header-user-name:hover + .tooltip-user {
+                opacity: 1;
+                transition: opacity 0.3s 1s;
+            }
+    .post-informations .post-header-user-info {
+        color: rgb(85, 100, 115);
+        font-size: 14px;
+    }
+        .post-informations .post-header-user-info:hover + .tooltip-user {
+            opacity: 1;
+        }
+        .post-informations .post-header-user-info:hover + .black-ground-div {
+            opacity: 1;
+            transition: all 0.3s ease-in-out 1s;
+        }
+.post-informations .post-header-user-premium-icon {
+    width: 15px;
+    margin-right: 5px;
+    margin-left: 2px;
+}
+.post-title {
+    font-size: 14px;
+}
+
+.post-header-left-section {
+    display: flex;
+    align-items: start;
+    gap: 7px;
+    flex-shrink: 0;
+}
+.post-header-left-section img {
+    width: 16px;
+}
+.post-header-left-section .post-common-hover-div div {
+    width: 24px;
+    height: 24px;
+    top: -4px;
+    left: -4px;
+}
+
+
+.post-content {
+    padding: 0px 12px 0px 43px;
+}
+.post-content p {
+    margin-bottom: 15px;
+}
+
+.post-image {
+    width: 90%;
+    border-radius: 15px;
+}
+
+.comment-container {
+    border: 1px solid rgb(210, 220, 220);
+    border-radius: 15px;
+    padding: 12px 10px;
+    transition: all 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+    .comment-container:hover {
+        background-color: rgba(235, 235, 235, 0.55);
+    }
+.comment-container p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+}
+.comment-informations {
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.comment-profile-picture {
+    width: 24px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+.comment-informations div {
+    color: rgb(85, 100, 115);
+    font-size: 14px;
+    
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.comment-premium-user-icon {
+    width: 14px;
+    margin-right: 3px;
+    margin-left: 2px;
+}
+
+
+
+
+.post-reactions {
+    height: 42px;
+    padding-left: 43px;
+    
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.post-reactions div {
+    height: 100%;
+}
+.post-reactions img {
+    width: 15px;
+}
+
+.post-reactions-right-section {
+    width: 42px;
+    padding-right: 2px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+    .post-reactions-right-section .post-common-hover-div {
+        height: fit-content;
+    }
+.post-reactions-left-section {
+    flex: 1;
+    
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+    .post-reactions-left-section section {
+        flex: 1;
+        
+        display: flex;
+        flex-shrink: 0;
+    }
+    .post-reactions-left-section img {
+        padding-right: 6px;
+
+        z-index: 1;
+    }
+
+.post-common-hover-div {
+    color: rgb(100, 100, 100);
+    font-size: 13px;
+    width: fit-content;
+    transition: all 0.3s;
+    
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    
+    position: relative;
+}
+    .post-common-hover-div:hover {
+        color: rgb(110, 210, 255);
+    }
+    #post-reaction-green:hover {color: rgb(125, 255, 110);}
+    #post-reaction-red:hover {color: rgb(255, 85, 85);}
+
+    .post-common-hover-div div {
+        background-color: rgb(110, 210, 255);
+        width: 27px;
+        height: 27px;
+        opacity: 0;
+        border-radius: 15px;
+        transition: all 0.3s;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+    }
+    #post-reaction-green div {background-color: rgb(125, 255, 110);}
+    #post-reaction-red div {background-color: rgb(255, 85, 85);}
+        .post-common-hover-div:hover div {
+            opacity: 0.7;
+        }
+
+
+
+
+.loading-section {
+    background-color: white;
+    padding: 70px 0px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+    .loading-section img {
+        width: 40px;
+    }
+
+
