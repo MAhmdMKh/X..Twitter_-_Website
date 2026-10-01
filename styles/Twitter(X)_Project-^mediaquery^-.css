@@ -1,0 +1,197 @@
+@media (max-height: 675px) {
+    #hidden-1 {
+        display: none;
+    }
+}
+@media (max-height: 630px) {
+    #hidden-2 {
+        display: none;
+    }
+}
+@media (max-height: 585px) {
+    #hidden-3 {
+        display: none;
+    }
+}
+
+
+
+
+
+@media (min-width: 1150px) {
+    header .post-section img {
+        display: none;
+    }
+}
+
+@media (max-width: 1185px) {
+    header .header-profile-more-options {
+        left: 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .header-links-section {
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .link-container-hover-div {
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 2px;
+    }
+    header .link-img-div {
+        height: 25px;
+    }
+    header .header-tooltips {
+        right: 0;
+    }
+    header .header-icons {
+        margin: 0;
+    }
+    header .link-text-div {
+        display: none;
+    }
+    header .post-section {
+        width: fit-content;
+        padding: 10px;
+    }
+    header .post-section div {
+        display: none;
+    }
+    header .post-section img {
+        display: block;
+    }
+
+    header .header-profile-section {
+        padding: 0;
+    }
+    header .profile-image {
+        margin-left: 10px;
+    }
+    header .user-info,
+    header .profile-more-options{
+        display: none;
+    }
+}
+
+@media (min-width: 975px) and (max-width: 1150px) {
+    body {
+        grid-template-columns: 70px 540px 345px;
+    }
+}
+
+@media (max-width: 975px) {
+    body {
+        grid-template-columns: 70px 540px;
+    }
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width: 628px) {
+    body {
+        grid-template-columns: 70px 1fr;
+    }
+}
+
+
+
+
+
+@media (min-width: 550px) and (max-width: 590px) {
+    main .post-informations .post-header-user-info-handle {/* Handle (post) */
+        max-width: 80px;
+    }
+}
+@media (max-width: 550px) {
+    main .post-informations .post-header-user-info-handle {/* Handle (post) */
+        max-width: 65px;
+    }
+}
+@media (max-width: 520px) {
+    main .post-informations .post-header-user-name {/* Name (post) */
+        max-width: 120px;
+    }
+}
+@media (max-width: 500px) {
+    main .user-post-edit button {/* user post section (edit options) */
+        position: absolute;
+        right: 0;
+    }
+    main .comment-informations div span {/* Comment Handle&Name (post) */
+        text-overflow: ellipsis;
+        max-width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+@media (max-width: 465px) {
+    main .post-informations .post-header-user-info-handle {/* Handle (post) */
+        max-width: 35px;
+    }
+}
+@media (max-width: 438px) {
+    main .user-post-edit .special-edit-option {/* remove PIN (user post edit option) */
+        display: none;
+    }
+
+    main .post-header-right-section .post-header-profile-pic {/* post picture */
+        width: 27px;
+    }
+    main .post-header-right-section .change-color-pic-div {/* post picture */
+        width: 27px;
+        height: 27px;
+    }
+    main .post-content,
+    main .post-reactions {/* post picture */
+        padding-left: 34px;
+    }
+}
+@media (max-width: 430px) {
+    main .user-post-edit {/* remove padding (user post edit options) */
+        padding-left: 0;
+    }
+
+    main .post-informations .post-header-user-name {/* Name (post) */
+        max-width: 50px;
+    }
+
+    main .post-reactions-right-section {/* bookmark and share (post reactions right section) */
+        display: none;
+    }
+}
+@media (max-width: 390px) {
+    main .comment-informations .comment-name { /* Comment Name (post) */
+        max-width: 60px;
+    }
+    main .comment-informations .comment-premium-user-icon,
+    main .comment-informations .comment-date,
+    main .comment-informations .comment-handle { /* hide comment details */
+        display: none;
+    }
+
+    main .post-reactions {/* move the post reactions a little */
+        padding-left: 22px;
+    }
+}
+@media (max-width: 360px) {
+    main .post-informations .post-header-user-name { /* Name (post) */
+        max-width: 160px;
+    }
+
+    main .post-informations .post-header-user-premium-icon,
+    main .post-informations .post-header-user-handle,
+    main .post-informations .post-header-user-info-date,
+    main .post-informations .post-header-user-post-date {/* hide the post header middle section */
+        display:  none;
+    }
+}

@@ -1,6 +1,7 @@
 main {
     background-color: white;
     height: 100%;
+    min-width: 270px;
     cursor: pointer;
     border-right: 1px solid rgb(240, 245, 245);
     border-left: 1px solid rgb(240, 245, 245);
@@ -62,13 +63,15 @@ main .posts {
     font-size: 13px;
     font-weight: bold;
 
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
+    .recent-topic div {
+        margin-top: 3px;
+    }
     .recent-topic img {
         width: 45px;
-        position: absolute;
-        left: 100px;
-        bottom: 0px;
     }
 
 .another-topic {
@@ -170,6 +173,8 @@ main .posts {
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
+
+    position: relative;
 }
 .user-edit-options {
     display: flex;
@@ -202,6 +207,10 @@ main .posts {
     .user-edit-options img {
         width: 18px;
         transition: all 0.2s;
+    }
+    .special-edit-option {
+        opacity: 0.4;
+        margin: 8px 9px;
     }
 .user-post-button {
     background-color: rgb(190, 190, 190);
@@ -265,6 +274,12 @@ main .posts {
     .post-informations .post-header-user-name {
         color: black;
         font-weight: bold;
+        text-overflow: ellipsis;
+        max-width: 180px;
+        white-space: nowrap;
+        overflow: hidden;
+
+        display: block;
     }
         .post-informations .post-header-user-name:hover {
             text-decoration: underline;
@@ -274,21 +289,36 @@ main .posts {
                 opacity: 1;
                 transition: opacity 0.3s 1s;
             }
-    .post-informations .post-header-user-info {
+    .post-informations .post-header-user-info-handle,
+    .post-informations .post-header-user-info-date {
         color: rgb(85, 100, 115);
         font-size: 14px;
+        text-overflow: ellipsis;
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+
+        display: block;
     }
-        .post-informations .post-header-user-info:hover + .tooltip-user {
+        .post-informations .post-header-user-info-handle:hover + .tooltip-user,
+        .post-informations .post-header-user-info-date:hover + .tooltip-user {
             opacity: 1;
         }
-        .post-informations .post-header-user-info:hover + .black-ground-div {
+        .post-informations .post-header-user-info-handle:hover + .black-ground-div,
+        .post-informations .post-header-user-info-date:hover + .black-ground-div {
             opacity: 1;
             transition: all 0.3s ease-in-out 1s;
         }
+    .post-informations .post-header-user-post-date {
+        position: relative;
+    }
 .post-informations .post-header-user-premium-icon {
     width: 15px;
     margin-right: 5px;
     margin-left: 2px;
+}
+.post-header-user-handle {
+    position: relative;
 }
 .post-title {
     font-size: 14px;
@@ -361,10 +391,17 @@ main .posts {
     align-items: center;
     flex-shrink: 0;
 }
+.comment-informations .comment-name {
+    color: black;
+    font-weight: bold;
+}
 .comment-premium-user-icon {
     width: 14px;
     margin-right: 3px;
     margin-left: 2px;
+}
+.comment-date {
+    margin-left: 3px;
 }
 
 
@@ -453,11 +490,9 @@ main .posts {
 
 
 
-
 .loading-section {
     background-color: white;
     padding: 70px 0px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
