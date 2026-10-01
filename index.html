@@ -59,6 +59,7 @@
   <link rel="stylesheet" href="styles/Twitter(X)_Project-^header^-.css" />
   <link rel="stylesheet" href="styles/Twitter(X)_Project-^main^-.css" />
   <link rel="stylesheet" href="styles/Twitter(X)_Project-^sidebar^-.css" />
+  <link rel="stylesheet" href="styles/Twitter(X)_Project-^mediaquery^-.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +69,7 @@
 
   <header>
     <div class="header">
-      <section>
+      <section class="header-links-section">
         <div class="logo-section">
           <div class="logo-hover-div">
             <a href="https://x.com/home" target="_blank">
@@ -76,16 +77,15 @@
             </a>
           </div>
         </div>
+
         <div class="links-section">
-
-
           <div class="link-container">
             <a href="https://x.com/home" target="_blank">
               <div class="link-container-anchor-div">
                 <div class="link-container-hover-div">
                   <div class="link-img-div">
                     <img class="header-tooltips" style="opacity: 1;" src="icons/blue-middle-point.png" />
-                    <img  class="header-icons" src="icons/home.svg"alt="home icon" />
+                    <img  class="header-icons" src="icons/home.svg" alt="home icon" />
                   </div>
                   <div class="link-text-div" style="font-weight: bold;">Home</div>
                 </div>
@@ -157,7 +157,7 @@
               </div>
             </a>
           </div>
-          <div class="link-container">
+          <div class="link-container" id="hidden-3">
             <a href="https://x.com/i/bookmarks" target="_blank">
               <div class="link-container-anchor-div">
                 <div class="link-container-hover-div">
@@ -170,7 +170,7 @@
               </div>
             </a>
           </div>
-          <div class="link-container">
+          <div class="link-container" id="hidden-1">
             <a href="https://x.com/i/jf/creators/studio" target="_blank">
               <div class="link-container-anchor-div">
                 <div class="link-container-hover-div">
@@ -183,7 +183,7 @@
               </div>
             </a>
           </div>
-          <div class="link-container">
+          <div class="link-container" id="hidden-2">
             <a href="https://x.com/i/premium_sign_up" target="_blank">
               <div class="link-container-anchor-div">
                 <div class="link-container-hover-div">
@@ -228,13 +228,16 @@
         </div>
 
         <div class="post-section">
-          <a href="https://x.com/compose/post" target="_blank">Post</a>
+          <a href="https://x.com/compose/post" target="_blank">
+            <div>Post</div>
+            <img src="icons/editing.png" alt="hidden post picture (width >= 1152px)" />
+          </a>
         </div>
       </section>
 
       <section class="header-profile-section">
         <img class="profile-image" src="icons/profile.png" alt="user with a gray background" />
-        <div style="margin-right: 32px;">
+        <div class="user-info">
           <div class="user-name">Mohamad Ahmed</div>
           <div class="user-handle"><span style="font-size: 12px;">&#64;</span>MAhmedMKhalil</div>
         </div>
@@ -251,7 +254,7 @@
     <section class="posts-topics">
       <div class="topic-options">
         <div class="recent-topic">
-          For you
+          <div>For you</div>
           <img src="icons/blue-line.png" alt="amazing blue line" />
         </div>
         <div class="another-topic">Following</div>
@@ -275,7 +278,7 @@
           <section><img src="icons/poll.png" alt="poll icon" /><div class="black-ground-div">Poll</div></section>
           <section><img src="icons/smile.png" alt="smile icon" /><div class="black-ground-div">Emoji</div></section>
           <section><img src="icons/event.png" alt="event schedule icon" /><div class="black-ground-div">schedule</div></section>
-          <img src="icons/pin.png" style="opacity: 0.4; margin: 8px 9px;" alt="pin or location icon" />
+          <img class="special-edit-option" src="icons/pin.png" alt="pin or location icon" />
           <section><img src="icons/flags.png" alt="flag icon" /><div class="black-ground-div">Content disclosure</div></section>
         </div>
         <button class="user-post-button">Post</button>
@@ -333,8 +336,8 @@
                 </div>
               </div>
               <img class="post-header-user-premium-icon" src="icons/verified-badge.svg" alt="premium user" />
-              <div style="position: relative;">
-                <span class="post-header-user-info">&#64;MAhmedMKhalil </span>
+              <div class="post-header-user-handle">
+                <span class="post-header-user-info-handle">&#64;MAhmedMKhalil</span>
                 <div class="tooltip-user">
                   <div class="tooltip-user-picture-follow" style="justify-content: start;">
                     <img src="images/M.Khalil-Image.png" alt="a profile photo" />
@@ -354,9 +357,9 @@
                   </div>
                 </div>
               </div>
-              <div class="post-header-user-info" style="margin: 0px 5px;">&#183;</div>
-              <div style="position: relative;">
-                <span class="post-header-user-info">Sep 10</span>
+              <div class="post-header-user-info-date" style="margin: 0px 5px;">&#183;</div>
+              <div class="post-header-user-post-date">
+                <span class="post-header-user-info-date">Sep 10</span>
                 <div class="black-ground-div">8:34 AM &#183; Sep 10, 2026</div>
               </div>
             </div>
@@ -392,9 +395,10 @@
             <div class="comment-informations">
               <img class="comment-profile-picture" src="images/M.Khalil-Image.png" alt="a profile photo" />
               <div>
-                <span style="color: black; font-weight: bold;">Mohamad Ahmed</span>
+                <span class="comment-name">Mohamad Ahmed</span>
                 <img class="comment-premium-user-icon" src="icons/verified-badge.svg" alt="premium user" />
-                &#64;MAhmedMKhalil &#183; 18h
+                <span class="comment-handle">&#64;MAhmedMKhalil</span>
+                <span class="comment-date">&#183; 18h</span>
               </div>
             </div>
             <p>
@@ -474,7 +478,7 @@
           <div class="post-header-middle-section">
             <div class="post-informations">
               <div style="position: relative;">
-                <span class="post-header-user-name">Mohamad Ahmed</span>
+                <span class="post-header-user-name">Mohamad Ahmed Mahmoud</span>
                 <div class="tooltip-user">
                   <div class="tooltip-user-picture-follow">
                     <img src="images/M.Khalil-Image.png" alt="a profile photo" />
@@ -494,8 +498,8 @@
                 </div>
               </div>
               <img class="post-header-user-premium-icon" src="icons/verified-badge.svg" alt="premium user" />
-              <div style="position: relative;">
-                <span class="post-header-user-info">&#64;MAhmedMKhalil</span>
+              <div class="post-header-user-handle">
+                <span class="post-header-user-info-handle">&#64;MAhmedMKhalil</span>
                 <div class="tooltip-user">
                   <div class="tooltip-user-picture-follow">
                     <img src="images/M.Khalil-Image.png" alt="a profile photo" />
@@ -514,9 +518,9 @@
                   </div>
                 </div>
               </div>
-              <div class="post-header-user-info" style="margin: 0px 5px;">&#183;</div>
-              <div style="position: relative;">
-                <span class="post-header-user-info">Aug 18</span>
+              <div class="post-header-user-info-date" style="margin: 0px 5px;">&#183;</div>
+              <div class="post-header-user-post-date">
+                <span class="post-header-user-info-date">Aug 18</span>
                 <div class="black-ground-div">3:21 PM &#183; Aug 18, 2026</div>
               </div>
             </div>
@@ -550,9 +554,10 @@
             <div class="comment-informations">
               <img class="comment-profile-picture" src="images/SimonXiong-Image.jpg" alt="a profile photo" />
               <div>
-                <span style="color: black; font-weight: bold;">Simon Xiong</span>
+                <span class="comment-name">Simon Xiong</span>
                 <img class="comment-premium-user-icon" src="icons/verified-badge.svg" alt="premium user" />
-                &#64;supersimple_dev &#183; Aug 20
+                <span class="comment-handle">&#64;supersimple_dev</span>
+                <span class="comment-date">&#183; Aug 20</span>
               </div>
             </div>
             <p>
@@ -612,7 +617,7 @@
             <div class="change-color-pic-div"></div>
             <div class="tooltip-user">
               <div class="tooltip-user-picture-follow">
-                <img src="images/M.Khalil-Image.png" alt="a profile photo"" />
+                <img src="images/M.Khalil-Image.png" alt="a profile photo" />
                 <div class="follow">Follow</div>
               </div>
               <div class="tooltip-user-name">Mohamad Ahmed</div>
@@ -631,7 +636,7 @@
           <div class="post-header-middle-section">
             <div class="post-informations">
               <div style="position: relative;">
-                <span class="post-header-user-name">Mohamad Ahmed</span>
+                <span class="post-header-user-name">Mohamad Ahmed Mahmoud</span>
                 <div class="tooltip-user">
                   <div class="tooltip-user-picture-follow">
                     <img src="images/M.Khalil-Image.png" alt="a profile photo" />
@@ -651,8 +656,8 @@
                 </div>
               </div>
               <img class="post-header-user-premium-icon" src="icons/verified-badge.svg" alt="premium icon" />
-              <div style="position: relative;">
-                <span class="post-header-user-info">&#64;MAhmedMKhalil</span>
+              <div class="post-header-user-handle">
+                <span class="post-header-user-info-handle">&#64;MAhmedMahdKhalil</span>
                 <div class="tooltip-user">
                   <div class="tooltip-user-picture-follow">
                     <img src="images/M.Khalil-Image.png" alt="a profile photo" />
@@ -671,9 +676,9 @@
                   </div>
                 </div>
               </div>
-              <div class="post-header-user-info" style="margin: 0px 5px;">&#183;</div>
-              <div style="position: relative;">
-                <span class="post-header-user-info">Jul 25</span>
+              <div class="post-header-user-info-date" style="margin: 0px 5px;">&#183;</div>
+              <div class="post-header-user-post-date">
+                <span class="post-header-user-info-date">Jul 25</span>
                 <div class="black-ground-div">9:26 PM &#183; Jul 25, 2025</div>
               </div>
             </div>
