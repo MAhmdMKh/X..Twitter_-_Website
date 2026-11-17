@@ -5,9 +5,9 @@ I built it while learning front-end development.
 
 [Live Demo](https://mahmdmkh.github.io/X..Twitter_-_Website/)
 
-![Desktop view](screenshots/.jpg)
-![Tablet view](screenshots/.jpg)
-![Mobile view](screenshots/.jpg)
+![Desktop view #1](screenshots/mahmdmkh_github_Desktop_Interface_1.png)
+![Desktop view #2](screenshots/mahmdmkh_github_Desktop_Interface_2.png)
+![Tablet view](screenshots/mahmdmkh_github_Tablet_Interface.jpg)
 
 ## Features
 
