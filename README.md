@@ -5,7 +5,7 @@ I built it while learning front-end development.
 
 [Live Demo](https://mahmdmkh.github.io/X..Twitter_-_Website/)
 # Desktop view #1
-- Another **views** at the end **(↓)** of this file
+- Another **views** at the **[end (↓)]([https://mahmdmkh.github.io/X..Twitter_-_Website/](https://github.com/MAhmdMKh/X..Twitter_-_Website/edit/main/README.md#desktop-view-2))** of this file
 ![Desktop view #1](screenshots/mahmdmkh_github_Desktop_Interface_1.PNG)
 
 ## Features
