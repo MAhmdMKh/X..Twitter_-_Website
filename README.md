@@ -6,10 +6,6 @@ I built it while learning front-end development.
 [Live Demo](https://mahmdmkh.github.io/X..Twitter_-_Website/)
 # Desktop view #1
 ![Desktop view #1](screenshots/mahmdmkh_github_Desktop_Interface_1.PNG)
-# Desktop view #2
-![Desktop view #2](screenshots/mahmdmkh_github_Desktop_Interface_2.PNG)
-# Tablet view #1 #2
-![Tablet view](screenshots/mahmdmkh_github_Tablet_Interface.jpg)
 
 ## Features
 
@@ -42,3 +38,14 @@ HTML5 · CSS3 (no JavaScript)
 Built while following the course
 [HTML & CSS Full Course - Beginner to Pro](https://www.youtube.com/watch?v=G3e-cpL7ofc)
 by SuperSimpleDev. Thank you for the great free course!
+
+# Desktop view #2
+![Desktop view #2](screenshots/mahmdmkh_github_Desktop_Interface_2.PNG)
+# Tablet view #1 #2
+![Tablet view](screenshots/mahmdmkh_github_Tablet_Interface.jpg)
+# Mobile view #1
+![Mobile view #1](screenshots/mahmdmkh_github_Mobile_Interface_1.jpg)
+# Mobile view #2
+![Mobile view #2](screenshots/mahmdmkh_github_Mobile_Interface_2.jpg)
+# Mobile view #3
+![Mobile view #3](screenshots/mahmdmkh_github_Mobile_Interface_3.jpg)
