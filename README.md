@@ -34,6 +34,9 @@ Built while following the course
 [HTML & CSS Full Course - Beginner to Pro](https://www.youtube.com/watch?v=G3e-cpL7ofc)
 by SuperSimpleDev. Thank you for the great free course!
 
+-----
+-----
+-----
 
 # Desktop view #2
 ![Desktop view #2](screenshots/mahmdmkh_github_Desktop_Interface_2.PNG)
